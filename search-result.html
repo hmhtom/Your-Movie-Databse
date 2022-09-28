@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Library-->
+    <!--Materialize V1.0.0 CSS Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!--Materialize Icons Library-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--JS Library-->
+    <!--jQuery V3.6.1-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--Moment.js Library-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <!--Materialize V1.0.0-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Custom Library-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper row">
+                <div class="col s3">
+                    <a href="./index.html" id="navinfo" class="brand-logo left">YMDB</a>
+                </div>
+                <form class="col s7">
+                    <div class="row">
+                        <div class="input-field col s9">
+                            <input placeholder="Search Movies" id="search_movies" type="text"
+                                class="validate searchBar">
+                        </div>
+                        <div class="input-field col s3">
+                            <a id="searchButton" class="waves-effect waves-light btn-small">Search</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="col s1">
+                    <i id="favouriteBtn" class="large material-icons right-align">star</i>
+                </div>
+            </div>
+
+        </nav>
+
+
+    </header>
+    <main>
+
+        <section>
+            <h2>Search Result for <span id="searchResultQuery">Query</span> </h2>
+        </section>
+
+        <div class="row">
+            <div class="col s6 left-align">
+                <a class="waves-effect waves-light btn-small pageButton">Previous</a>
+            </div>
+            <div class="col s6 right-align">
+                <a class="waves-effect waves-light btn-small pageButton">Next</a>
+            </div>
+
+        </div>
+
+
+
+        <div id="searchResultContainer" class="searchContainer">
+            <div class="row">
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example center-align">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p class="center-align"> Movie Title </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+</body>
+
+</html>

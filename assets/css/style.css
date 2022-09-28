@@ -1,0 +1,62 @@
+.nav-wrapper {
+    background-color: rgb(23, 23, 116);
+}
+
+#navinfo {
+    color: rgb(196, 17, 17);
+}
+
+#favouriteBtn {
+    color: yellow;
+    cursor: pointer;
+
+}
+
+
+.caption {
+    display: block;
+}
+
+.search input {
+    width: 300px;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+.search {
+    float: right;
+    margin: 7px;
+}
+
+#searchButton {
+    background-color: rgb(25, 100, 161);
+    border-radius: 16px;
+    color: #dfe4eb;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.searchBar {
+    background: white;
+    opacity: 1;
+    color: white;
+}
+
+.custom-col {
+    width: 20%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.searchContainer img {
+    border-radius: 25px;
+}
+
+.searchContainer p {
+    font-weight: bold;
+}
