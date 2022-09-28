@@ -6,8 +6,9 @@
     color: rgb(196, 17, 17);
 }
 
-#favouriteIcon {
+#favouriteBtn {
     color: yellow;
+    cursor: pointer;
 
 }
 
