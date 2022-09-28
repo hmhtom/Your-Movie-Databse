@@ -12,10 +12,6 @@
 
 }
 
-/* .thumbnail {
-    border-radius: 40%;
-} */
-
 
 .caption {
     display: block;
@@ -33,7 +29,7 @@
     margin: 7px;
 }
 
-.searchButton {
+#searchButton {
     background-color: rgb(25, 100, 161);
     border-radius: 16px;
     color: #dfe4eb;
@@ -48,8 +44,6 @@
     background: white;
     opacity: 1;
     color: white;
-    /* border-radius: 2; */
-
 }
 
 .custom-col {
