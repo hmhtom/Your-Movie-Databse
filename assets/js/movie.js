@@ -1,6 +1,7 @@
 //Render Movie Info on movie page
 
 const TMDB_API_KEY = "d94dfa549a03679b14c6609bddc9a3b0";
+const YOUTUBE_API_KEY = "AIzaSyDPP8A921zDu8qi7NMvErqHkexWvB-Q498";
 
 function getId() {
   //get id from location.search ?id={ID}
