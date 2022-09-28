@@ -34,6 +34,7 @@
 
 .searchButton {
     background-color: rgb(25, 100, 161);
+    border-radius: 16px;
     color: #dfe4eb;
     padding: 5px 10px;
     margin-right: 16px;
@@ -43,10 +44,11 @@
 }
 
 .searchBar {
-    background: aliceblue;
-    opacity: 0.5;
+    background: white;
+    opacity: 1;
     color: white;
     /* border-radius: 2; */
+
 }
 
 .custom-col {
@@ -54,4 +56,12 @@
     margin-left: auto;
     left: auto;
     right: auto;
+}
+
+.searchContainer img {
+    border-radius: 25px;
+}
+
+.searchContainer p {
+    font-weight: bold;
 }
