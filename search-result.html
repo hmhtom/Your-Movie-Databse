@@ -24,20 +24,29 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper">
-                <a href="./index.html" id="navinfo" class="brand-logo left">YMDB</a>
-                <i id="favouriteIcon" class="large material-icons right">star</i>
+            <div class="nav-wrapper row">
+                <div class="col s3">
+                    <a href="./index.html" id="navinfo" class="brand-logo left">YMDB</a>
+                </div>
+                <form class="col s7">
+                    <div class="row">
+                        <div class="input-field col s9">
+                            <input placeholder="Search Movies" id="search_movies" type="text"
+                                class="validate searchBar">
+                        </div>
+                        <div class="input-field col s3">
+                            <a class="waves-effect waves-light btn-small searchButton">Search</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="col s1">
+                    <i id="favouriteIcon" class="large material-icons right-align">star</i>
+                </div>
             </div>
+
         </nav>
 
-        <div class="search">
-            <form action="#">
-                <input type="text"
-                    placeholder="Search Movies"
-                    name="search">
-                    <a class="waves-effect waves-light btn-small">Search</a>
-            </form>
-        </div>
+
     </header>
     <main>
 
@@ -45,71 +54,41 @@
             <h2>Search Result for Query </h2>
         </section>
 
-        <!-- <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">Previous</a></li>
-            <li class="active"><a href="#!">Next</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-        </ul> -->
-
-        
         <div class="row">
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
+            <div class="col s6 left-align">
+                <a class="waves-effect waves-light btn-small pageButton">Previous</a>
             </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
+            <div class="col s6 right-align">
+                <a class="waves-effect waves-light btn-small pageButton">Next</a>
             </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
+
+        </div>
+
+
+
+        <div class="searchContainer">
+            <div class="row">
+                <div class="col custom-col grid-example">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                    <p> Movie Title </p>
+                </div>
+                <div class="col custom-col grid-example">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                </div>
+                <div class="col custom-col grid-example">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                </div>
+                <div class="col custom-col grid-example">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                </div>
+                <div class="col custom-col grid-example">
+                    <img src="https://www.tlbx.app/200-300.svg" alt="">
+                </div>
             </div>
-            <div class="col s2">
-                <img class="thumbnail"  src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail"  src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            <div class="col s2">
-                <img class="thumbnail" src= "https://complianz.io/wp-content/uploads/2019/03/placeholder-300x202.jpg" alt="">
-            </div>
-            
-                
+        </div>
+
+
+
 
     </main>
 </body>
