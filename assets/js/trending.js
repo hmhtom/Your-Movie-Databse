@@ -1,7 +1,7 @@
 //Rendering trending on index.html
 
 const TMDB_API_KEY = "d94dfa549a03679b14c6609bddc9a3b0";
-//trending/movie/week
+
 function fetchTrending() {
   //Fetch response from Trending API on TMDB
   fetch(
@@ -29,6 +29,7 @@ function renderTrending(data) {
   let row = null;
   for (var i in data.results) {
     if (i % 6 == 0) {
+      //created a row here to avoid width of 40
       row = $('<div class="row">');
       $("#trendingContainer").append(row);
     }
@@ -40,7 +41,8 @@ function renderTrending(data) {
       "background-size": "contain",
       "background-position": "center",
     });
-    //instead of appending results boc to trending container, append  results box to row
+    //EveryTrendingBox will have a href link to (moviepage.html?id={id}&title={TITLE}) to a new tab
+    //Trending box will have data-title, data-id, data-poster_url
     let resultBox = $('<a class="col s2 center searchResultBox hoverable">')
       .append(imgBox, `<h6>${data.results[i].title}</h6>`)
       .attr({
@@ -56,8 +58,7 @@ function renderTrending(data) {
 }
 
 
-//Render into #trendingContainer
-//EveryTrendingBox will have a href link to (moviepage.html?id={id}&title={TITLE}) to a new tab
-//Trending box will have data-title, data-id, data-poster_url
+
+
 
 fetchTrending();
