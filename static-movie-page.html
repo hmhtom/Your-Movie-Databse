@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Movie Page</title>
-    <!--Link to style sheet-->
-    <!--The rel attribute specifies relationship between linked documents-->
-    <!--The href attribute creates a link to another file or webpage-->
-    <link rel="stylesheet" href="./assets">
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--CSS Library-->
+        <!--Materialize V1.0.0 CSS Library-->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+        <!--JS Library-->
+        <!--jQuery V3.6.1-->
+        <script
+          src="https://code.jquery.com/jquery-3.6.1.js"
+          integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+          crossorigin="anonymous"></script>
+        <!--Moment.js Library-->
+        <script
+          type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <!--Materialize V1.0.0-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Custom Library-->
+        <link rel="stylesheet" href="assets/css/style.css" />
+      </head>
+   
 
   <body>
-    <div class="container">
       <header>
-        <h1>YMDB</h1>
+        <a href="index.html"><h1>YMDB</h1></a>
       </header>
-
-      <section class="lesson">
+        <!-- The src attribute is used with <img> to specify an absolute or relative path to an image -->
+        <!-- The alt attribute specifies the alternative text for an image -->
+        <!--<img src="./assets/images/sample.jpg" alt="placeholder image"/>-->
+        <!-- The href attribute is used with <a> to specify a URL-->
+      <div class="row">
+      <div class="col s6"><img src="https://via.placeholder.com/300" alt="placeholder image"/></div>
+      <div class="col s6"> 
         <h2>Title</h2><span style="font-size:300%;color:yellow;">&starf;</span>
-        
         <h4> -Overview </h4>
         <h4> -Genres </h4>
         <h4> -Release Date </h4>
-        <h4> -IMDB Link  </h4> 
-        <!-- The src attribute is used with <img> to specify an absolute or relative path to an image -->
-        <!-- The alt attribute specifies the alternative text for an image -->
-        <img src="https://via.placeholder.com/500" alt="placeholder image"/>
-        <br>
-        <!--<img src="./assets/images/sample.jpg" alt="placeholder image"/>-->
-        <br>
-        <!-- The href attribute is used with <a> to specify a URL-->
+        <h4> -IMDB Link  </h4></div>
         <a href="https://www.google.com">This is a link to Google.com</a>
-      </section>
+      </div>
 
       <!-- A class is used to identify one or more elements-->
-      <section class="overview">
+     
         <h2>Related Videos</h2>
         <h4>Relateed videos based on your movie choice</h4>
+        <div class="#relatedVideoContainer">
         <img src="https://via.placeholder.com/200" alt="placeholder image"/>
         <img src="https://via.placeholder.com/200" alt="placeholder image"/>
         <img src="https://via.placeholder.com/200" alt="placeholder image"/>
         <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-         <!--An id is an unique identifier to identify a single element-->
-        <p id="paragraph-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <br>
-      </section>
+        </div>
+       
+     
 
-      <footer class="footer">
-        <p>
+      <footer>
             &copy; 2022 YMDB Group Project, Inc.
-        </p>
+       
     </footer>
 
-    </div>
+    
   </body>
 
 </html>
