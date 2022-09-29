@@ -26,7 +26,12 @@ function fetchTrending() {
 //Render Trending
 function renderTrending(data) {
   //Render Trending from successful data fetched
+  let row = null;
   for (var i in data.results) {
+    if (i % 6 == 0) {
+      row = $('<div class="row">');
+      $("#trendingContainer").append(row);
+    }
     debugger;
     let imgUrl = `https://image.tmdb.org/t/p/w200/${data.results[i].poster_path}`;
     let imgBox = $("<div>").css({
@@ -35,6 +40,7 @@ function renderTrending(data) {
       "background-size": "contain",
       "background-position": "center",
     });
+    //instead of appending results boc to trending container, append  results box to row
     let resultBox = $('<a class="col s2 center searchResultBox hoverable">')
       .append(imgBox, `<h6>${data.results[i].title}</h6>`)
       .attr({
@@ -44,7 +50,7 @@ function renderTrending(data) {
         href: `static-movie-page.html?id=${data.results[i].id}`,
       });
 
-    $("#trendingContainer").append(resultBox);
+    row.append(resultBox);
     console.log(data);
   }
 }
