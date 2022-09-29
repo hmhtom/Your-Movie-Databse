@@ -40,16 +40,14 @@
               <div class="input-field col s9">
                 <input
                   placeholder="Search Movies"
-                  id="search_movies"
+                  id="searchBar"
                   type="text"
                   class="validate searchBar" />
               </div>
               <div class="input-field col s3">
-                <button
-                  id="searchButton"
-                  class="waves-effect waves-light btn-small">
-                  Search
-                </button>
+                <a id="searchBtn" class="waves-effect waves-light btn-small"
+                  >Search</a
+                >
               </div>
             </div>
           </form>
@@ -63,6 +61,7 @@
     </header>
     <main>
       <section>
+
         <h3>Search for <span id="searchResultQuery">Query</span></h2>
       </section>
 
@@ -79,5 +78,6 @@
     </main>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/searchResult.js"></script>
+
   </body>
 </html>
