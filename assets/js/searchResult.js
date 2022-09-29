@@ -4,7 +4,7 @@ const TMDB_API_KEY = "d94dfa549a03679b14c6609bddc9a3b0";
 
 function getQuery() {
   //Get search query from location.search
-  return new URL(location.href).searchParams.get("q");
+  return decodeURIComponent(new URL(location.href).searchParams.get("q"));
 }
 
 function fetchSearch(query) {
