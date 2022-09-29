@@ -1,64 +1,72 @@
-.nav-wrapper {
-  background-color: rgb(23, 23, 116);
-}
-
-#navinfo {
-  color: rgb(196, 17, 17);
-}
-
-#favouriteBtn {
-  color: yellow;
-  cursor: pointer;
-}
-
-.caption {
-  display: block;
-}
-
-.search input {
-  width: 300px;
-  height: 25px;
-  border-radius: 25px;
-  border: none;
-}
-
-.search {
-  float: right;
-  margin: 7px;
-}
-
-#searchButton {
-  background-color: rgb(25, 100, 161);
-  border-radius: 16px;
-  color: #dfe4eb;
-  padding: 5px 10px;
-  margin-right: 16px;
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-}
-
-.searchBar {
-  background: white;
-  opacity: 1;
-  color: white;
-}
-
-.searchResultBox {
-  height: 40vh;
-  margin-top: 50px;
+/*Custom Property*/
+.flex {
   display: flex;
+}
+
+.flex-column {
   flex-direction: column;
-  border-radius: 15px;
 }
 
-.searchResultBox div {
-  flex: 6;
-  border-radius: 15px;
-  justify-self: center;
-  background-color: lightgray;
+.justify-between {
+  justify-content: space-between;
 }
 
-.searchResultBox h6 {
-  flex: 1;
+.justify-center {
+  justify-content: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+/*General*/
+/*Nav Bar/Logo*/
+.logo {
+  font-size: 3em;
+  text-align: center;
+}
+.logo a {
+  text-shadow: 2px 2px 8px black;
+}
+/*Footer*/
+footer {
+  text-align: center;
+}
+/*Main title for result cards*/
+.card-main-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*index.html*/
+/*Hero-Area*/
+
+.parallax-container {
+  height: 90vh;
+}
+
+.hero h1 {
+  font-size: 10em;
+  text-shadow: 10px 2px 8px black;
+}
+.hero h2 {
+  font-size: 5em;
+  text-shadow: 10px 2px 8px black;
+}
+
+/*Movie Page*/
+.movie-info {
+  margin-top: 5vh;
 }
