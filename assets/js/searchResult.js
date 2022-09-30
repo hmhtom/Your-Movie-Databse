@@ -63,8 +63,14 @@ function renderSearch(data) {
     card.attr({
       "data-title": `${data.results[i].title}`,
       "data-id": `${data.results[i].id}`,
-      "data.poster_path": `${data.results[i].poster_path}`,
+      "data-poster_path": `${data.results[i].poster_path}`,
     });
+
+    card.draggable({
+      helper: "clone",
+      scroll: false,
+    });
+
     $("#searchResultContainer").append(card);
   }
 }
