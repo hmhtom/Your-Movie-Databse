@@ -31,6 +31,13 @@
   margin: 0;
 }
 
+#toast-container {
+  top: auto !important;
+  left: auto !important;
+  bottom: 0;
+  right: 5%;
+}
+
 /*General*/
 /*Nav Bar/Logo*/
 .logo {
