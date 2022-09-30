@@ -10,7 +10,7 @@ function getQuery() {
 function fetchSearch(query) {
   $("#searchResultQuery").text(query);
   fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${query}`
+    `https://api.themoviedb.org/3/searchhh/movie?api_key=${TMDB_API_KEY}&query=${query}`
   )
     .then((res) => {
       if (!res.ok) {
@@ -24,6 +24,8 @@ function fetchSearch(query) {
     .catch((error) => {
       //Redirect to Error Page
       console.log(error.status);
+      window.location.href = "./error-status.html?error=We are having trouble fetching your results, please try again later!";
+
     });
 }
 

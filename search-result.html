@@ -1,87 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS Library-->
-    <!--Materialize V1.0.0 CSS Library-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <!--Materialize Icons Library-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet" />
-    <!--jQuery UI V1.13.2 Themes:base-->
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <!--JS Library-->
-    <!--jQuery V3.6.1-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"></script>
-    <!--Moment.js Library-->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <!--Materialize V1.0.0-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!--jQuery UI V1.3.2-->
-    <script
-      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
-      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
-      crossorigin="anonymous"></script>
-    <!--Custom Library-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>YMDB-Your Movie Database|Search Results</title>
-  </head>
-  <body>
-    <!--Nav Bar-->
-    <div class="nav-extended">
-      <nav class="user-select-none">
-        <div class="row nav-wrapper indigo darken-3">
-          <div class="col s12 m1 logo">
-            <a href="./index.html" class="red-text">YMDB</a>
-          </div>
-          <div class="input-field col s6 m4 offset-m3 indigo darken-3">
-            <input id="searchBar" type="search" />
-            <label class="label-icon" for="searchBar"
-              ><i class="material-icons">search</i></label
-            >
-          </div>
-          <div class="col s6 m4 indigo darken-3">
-            <a
-              id="searchBtn"
-              class="btn blue waves-effect waves-light align-self-center br-20"
-              >Search</a
-            >
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS Library-->
+  <!--Materialize V1.0.0 CSS Library-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!--Materialize Icons Library-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--jQuery UI V1.13.2 Themes:base-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <!--JS Library-->
+  <!--jQuery V3.6.1-->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <!--Moment.js Library-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <!--Materialize V1.0.0-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--jQuery UI V1.3.2-->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+    integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <!--Custom Library-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>YMDB-Your Movie Database|Search Results</title>
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <div class="nav-extended">
+    <nav class="user-select-none">
+      <div class="row nav-wrapper indigo darken-3">
+        <div class="col s12 m1 logo">
+          <a href="./index.html" class="red-text">YMDB</a>
         </div>
-      </nav>
-    </div>
-    <!--Favourite Btn Fixed-->
-    <div class="fixed-action-btn user-select-none">
-      <a
-        id="favouriteBtn"
-        href="favourite.html"
-        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
-        <i class="large material-icons">star</i>
-      </a>
-    </div>
-    <!--Search Results-->
-    <h2 class="header user-select-none">
-      Search for <span id="searchResultQuery"></span>
-    </h2>
-    <!--Search Results Container-->
-    <div class="row" id="searchResultContainer"></div>
-    <!--Footer Area-->
-    <footer class="indigo darken-3 white-text user-select-none">
-      &copy; 2022 YMDB Group Project, Inc.
-    </footer>
-    <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/searchResult.js"></script>
-    <script src="./assets/js/dropFavourite.js"></script>
-  </body>
+        <div class="input-field col s6 m4 offset-m3 indigo darken-3">
+          <input id="searchBar" type="search" />
+          <label class="label-icon" for="searchBar"><i class="material-icons">search</i></label>
+        </div>
+        <div class="col s6 m4 indigo darken-3">
+          <a id="searchBtn" class="btn blue waves-effect waves-light align-self-center br-20">Search</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--Favourite Btn Fixed-->
+  <div class="fixed-action-btn user-select-none">
+    <a id="favouriteBtn" href="favourite.html" class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+      <i class="large material-icons">star</i>
+    </a>
+  </div>
+  <!--Search Results-->
+  <h2 class="header user-select-none">
+    Search for <span id="searchResultQuery"></span>
+  </h2>
+  <!--Search Results Container-->
+  <div class="row" id="searchResultContainer">
+
+  </div>
+  <!--Footer Area-->
+  <footer class="indigo darken-3 white-text user-select-none">
+    &copy; 2022 YMDB Group Project, Inc.
+  </footer>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/searchResult.js"></script>
+  <script src="./assets/js/dropFavourite.js"></script>
+</body>
+
 </html>
