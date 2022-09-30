@@ -40,7 +40,6 @@ function saveToFavourite(id, title, poster_path) {
         poster_path: `https://image.tmdb.org/t/p/w500${poster_path}`,
       },
     };
-    console.log(favouriteList);
   } else {
     favouriteList = JSON.parse(localStorage.getItem("favourite"));
     favouriteList[id] = {
