@@ -42,33 +42,33 @@
               ><i class="material-icons">search</i></label
             >
           </div>
-          <div class="col s6 m4 flex justify-between indigo darken-3">
+          <div class="col s6 m4 indigo darken-3">
             <a
               id="searchBtn"
               class="btn blue waves-effect waves-light align-self-center br-20"
               >Search</a
             >
-            <a
-              id="favouriteBtn"
-              href="favourite.html"
-              class="btn-floating btn-large waves-effect waves-light yellow darken-2"
-              ><i class="large material-icons">star</i></a
-            >
           </div>
         </div>
       </nav>
     </div>
-    <!--Hero Area-->
-    <div class="parallax-container">
-      <div class="parallax"><img src="./assets/img/hero-img.png" /></div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="favouriteBtn"
+        href="favourite.html"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+        <i class="large material-icons">star</i>
+      </a>
     </div>
-
+    <!--Hero Area-->
+    <img src="./assets/img/hero-img.png" class="responsive-img" />
     <!--Trending-->
-    <section class="section trending">
-      <h2 class="header red-text">Trending</h2>
+    <div class="trending user-select-none">
+      <h2 class="header">Trending</h2>
       <!--Trending Container-->
       <div class="row" id="trendingContainer"></div>
-    </section>
+    </div>
 
     <!--Footer Area-->
     <footer class="indigo darken-3 white-text user-select-none">

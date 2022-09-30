@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!--Custom Library-->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>YMDB-Your Movie Database|Movie</title>
+    <title>YMDB-Your Movie Database</title>
   </head>
   <body>
     <!--Nav Bar-->
@@ -39,8 +39,23 @@
         </div>
       </nav>
     </div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="addFavouriteBtn"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2 scale-transition">
+        <i class="large material-icons">star</i>
+      </a>
+    </div>
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="deleteFavouriteBtn"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2 scale-transition">
+        <i class="large material-icons">clear</i>
+      </a>
+    </div>
     <!--Movie Info-->
-    <div class="row movie">
+    <div class="row movie black">
       <div class="col s6 m5 l4 xl3 offset-m1 offset-l2 offset-xl3">
         <img
           class="responsive-img"
@@ -73,18 +88,21 @@
         </ul>
       </div>
     </div>
-
-    <!-- A class is used to identify one or more elements-->
     <div class="divider"></div>
-    <h2>Related Videos</h2>
-    <h4>Relateed videos based on your movie choice</h4>
-    <div class="#relatedVideoContainer">
-      <img src="https://via.placeholder.com/200" alt="placeholder image" />
-      <img src="https://via.placeholder.com/200" alt="placeholder image" />
-      <img src="https://via.placeholder.com/200" alt="placeholder image" />
-      <img src="https://via.placeholder.com/200" alt="placeholder image" />
+    <!--Related Video-->
+    <h2 class="header user-select-none">Related Videos</h2>
+    <div class="row" id="relatedVideoContainer">
+      <div class="col s6 m4 l3 xl2">
+        <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/{videoId}"
+          frameborder="0"></iframe>
+      </div>
     </div>
 
-    <footer>&copy; 2022 YMDB Group Project, Inc.</footer>
+    <footer class="indigo darken-3 white-text user-select-none">
+      &copy; 2022 YMDB Group Project, Inc.
+    </footer>
   </body>
 </html>

@@ -43,6 +43,7 @@
 /*Footer*/
 footer {
   text-align: center;
+  z-index: 2;
 }
 /*Main title for result cards*/
 .card-main-title {
@@ -51,22 +52,12 @@ footer {
 }
 
 /*index.html*/
-/*Hero-Area*/
-
-.parallax-container {
-  height: 90vh;
-}
-
-.hero h1 {
-  font-size: 10em;
-  text-shadow: 10px 2px 8px black;
-}
-.hero h2 {
-  font-size: 5em;
-  text-shadow: 10px 2px 8px black;
-}
 
 /*Movie Page*/
 .movie-info {
   margin-top: 5vh;
+}
+
+#relatedVideoContainer {
+  margin: 10px;
 }

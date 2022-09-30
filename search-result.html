@@ -42,24 +42,29 @@
               ><i class="material-icons">search</i></label
             >
           </div>
-          <div class="col s6 m4 flex justify-between indigo darken-3">
+          <div class="col s6 m4 indigo darken-3">
             <a
               id="searchBtn"
               class="btn blue waves-effect waves-light align-self-center br-20"
               >Search</a
             >
-            <a
-              id="favouriteBtn"
-              href="favourite.html"
-              class="btn-floating btn-large waves-effect waves-light yellow darken-2"
-              ><i class="large material-icons">star</i></a
-            >
           </div>
         </div>
       </nav>
     </div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="favouriteBtn"
+        href="favourite.html"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+        <i class="large material-icons">star</i>
+      </a>
+    </div>
     <!--Search Results-->
-    <h3>Search for <span id="searchResultQuery">Query</span></h3>
+    <h2 class="header user-select-none">
+      Search for <span id="searchResultQuery"></span>
+    </h2>
     <!--Search Results Container-->
     <div class="row" id="searchResultContainer"></div>
     <!--Footer Area-->
