@@ -33,9 +33,9 @@
 
 #toast-container {
   top: auto !important;
-  right: auto !important;
+  left: auto !important;
   bottom: 0;
-  left: 75%;
+  right: 5%;
 }
 
 /*General*/
