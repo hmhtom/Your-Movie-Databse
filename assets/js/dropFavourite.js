@@ -7,8 +7,8 @@ $("#favouriteBtn").droppable({
     const poster_path = ui.draggable[0].getAttribute("data-poster_path");
     //Check if localstorage already have item
     if (
-      localStorage.getItem("favourite") !== null &&
-      JSON.parse(localStorage.getItem("favourite")).hasOwnProperty(id)
+      localStorage.getItem("favourites") !== null &&
+      JSON.parse(localStorage.getItem("favourites")).some((r) => r.id == id)
     ) {
       //Prompt already in favourite
       M.toast({
@@ -33,21 +33,23 @@ $("#favouriteBtn").droppable({
 
 function saveToFavourite(id, title, poster_path) {
   let favouriteList;
-  if (localStorage.getItem("favourite") === null) {
-    favouriteList = {
-      [id]: {
+  if (localStorage.getItem("favourites") === null) {
+    favouriteList = [
+      {
+        id: id,
         title: title,
         poster_path: `https://image.tmdb.org/t/p/w500${poster_path}`,
       },
-    };
+    ];
   } else {
-    favouriteList = JSON.parse(localStorage.getItem("favourite"));
-    favouriteList[id] = {
+    favouriteList = JSON.parse(localStorage.getItem("favourites"));
+    favouriteList.push({
+      id: id,
       title: title,
       poster_path: `https://image.tmdb.org/t/p/w500${poster_path}`,
-    };
+    });
   }
-  localStorage.setItem("favourite", JSON.stringify(favouriteList));
+  localStorage.setItem("favourites", JSON.stringify(favouriteList));
 }
 
 function favouriteGreen() {
