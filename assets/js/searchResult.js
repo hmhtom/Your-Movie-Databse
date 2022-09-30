@@ -30,25 +30,42 @@ function fetchSearch(query) {
 function renderSearch(data) {
   //Render #searchResultQuery and #searchResultContainer with data given
   $("#searchResultQuery").append(` and found ${data.results.length} results.`);
-
+  //For each result create card
   for (var i in data.results) {
-    let imgUrl = `https://image.tmdb.org/t/p/w200/${data.results[i].poster_path}`;
-    let imgBox = $("<div>").css({
-      "background-image": "url(" + imgUrl + ")",
-      "background-repeat": "no-repeat",
-      "background-size": "contain",
-      "background-position": "center",
+    let card = $(`
+    <div class="col s6 m4 l3 xl2 card-container">
+      <div class="card medium hoverable user-select-none">
+        <div class="card-image">
+          <img 
+            src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}" 
+            onerror="this.src='https://via.placeholder.com/300?text=YMDB'"
+            alt="poster"/>
+        </div>
+        <div class="card-content">
+          <span class="card-main-title grey-text text-darken-4">${
+            data.results[i].title
+          }</span>
+        </div>
+        <div class="card-action">
+          <a href="static-movie-page.html?id=${
+            data.results[i].id
+          }&title=${encodeURIComponent(data.results[i].title)}">View Detail</a>
+          <i class="material-icons right activator">more_vert</i>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title">${
+            data.results[i].title
+          }<i class="material-icons right">close</i></span>
+          <p>${data.results[i].overview}</p>
+        </div>
+      </div>
+    </div>`);
+    card.attr({
+      "data-title": `${data.results[i].title}`,
+      "data-id": `${data.results[i].id}`,
+      "data.poster_path": `${data.results[i].poster_path}`,
     });
-    let resultBox = $('<a class="col s2 center searchResultBox hoverable">')
-      .append(imgBox, `<h6>${data.results[i].title}</h6>`)
-      .attr({
-        "data-title": data.results[i].title,
-        "data-id": data.results[i].id,
-        "data-imgUrl": imgUrl,
-        href: `static-movie-page.html?id=${data.results[i].id}`,
-      });
-
-    $("#searchResultContainer").append(resultBox);
+    $("#searchResultContainer").append(card);
   }
 }
 

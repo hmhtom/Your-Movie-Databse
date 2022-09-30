@@ -1,68 +1,108 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--CSS Library-->
-        <!--Materialize V1.0.0 CSS Library-->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <!--JS Library-->
-        <!--jQuery V3.6.1-->
-        <script
-          src="https://code.jquery.com/jquery-3.6.1.js"
-          integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-          crossorigin="anonymous"></script>
-        <!--Moment.js Library-->
-        <script
-          type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-        <!--Materialize V1.0.0-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <!--Custom Library-->
-        <link rel="stylesheet" href="assets/css/style.css" />
-      </head>
-   
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Library-->
+    <!--Materialize V1.0.0 CSS Library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!--Materialize Icons Library-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <!--JS Library-->
+    <!--jQuery V3.6.1-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"></script>
+    <!--Moment.js Library-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <!--Materialize V1.0.0-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Custom Library-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>YMDB-Your Movie Database</title>
+  </head>
   <body>
-      <header>
-        <a href="index.html"><h1>YMDB</h1></a>
-      </header>
-        <!-- The src attribute is used with <img> to specify an absolute or relative path to an image -->
-        <!-- The alt attribute specifies the alternative text for an image -->
-        <!--<img src="./assets/images/sample.jpg" alt="placeholder image"/>-->
-        <!-- The href attribute is used with <a> to specify a URL-->
-      <div class="row">
-      <div class="col s6"><img src="https://via.placeholder.com/300" alt="placeholder image"/></div>
-      <div class="col s6"> 
-        <h2>Title</h2><span style="font-size:300%;color:yellow;">&starf;</span>
-        <h4> -Overview </h4>
-        <h4> -Genres </h4>
-        <h4> -Release Date </h4>
-        <h4> -IMDB Link  </h4></div>
-        <a href="https://www.google.com">This is a link to Google.com</a>
-      </div>
-
-      <!-- A class is used to identify one or more elements-->
-     
-        <h2>Related Videos</h2>
-        <h4>Relateed videos based on your movie choice</h4>
-        <div class="#relatedVideoContainer">
-        <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-        <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-        <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-        <img src="https://via.placeholder.com/200" alt="placeholder image"/>
+    <!--Nav Bar-->
+    <div class="nav-extended">
+      <nav class="user-select-none">
+        <div class="row nav-wrapper indigo darken-3">
+          <div class="col s12 logo">
+            <a href="./index.html" class="red-text">YMDB</a>
+          </div>
         </div>
-       
-     
+      </nav>
+    </div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="addFavouriteBtn"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2 scale-transition">
+        <i class="large material-icons">star</i>
+      </a>
+    </div>
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="deleteFavouriteBtn"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2 scale-transition">
+        <i class="large material-icons">clear</i>
+      </a>
+    </div>
+    <!--Movie Info-->
+    <div class="row movie black">
+      <div class="col s6 m5 l4 xl3 offset-m1 offset-l2 offset-xl3">
+        <img
+          class="responsive-img"
+          src="https://www.themoviedb.org/t/p/original/rqeYMLryjcawh2JeRpCVUDXYM5b.jpg" />
+      </div>
+      <div class="col s4">
+        <ul class="collection with-header">
+          <li class="collection-header"><h3>Title:</h3></li>
 
-      <footer>
-            &copy; 2022 YMDB Group Project, Inc.
-       
+          <li class="collection-item">
+            <h5>Genres:</h5>
+            Here is the Genres
+          </li>
+          <li class="collection-item">
+            <h5>Release Date:</h5>
+            Here is the date
+          </li>
+          <li class="collection-item">
+            <h5>Overview:</h5>
+            Here goes the description
+          </li>
+          <li class="collection-item">
+            <h5>Production Companies:</h5>
+            Here goes the description
+          </li>
+          <li class="collection-item">
+            <h5>IMDB:</h5>
+            <a href="#">Here is the link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <!--Related Video-->
+    <h2 class="header user-select-none">Related Videos</h2>
+    <div class="row" id="relatedVideoContainer">
+      <div class="col s6 m4 l3 xl2">
+        <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/{videoId}"
+          frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <footer class="indigo darken-3 white-text user-select-none">
+      &copy; 2022 YMDB Group Project, Inc.
     </footer>
-
-    
   </body>
-
 </html>

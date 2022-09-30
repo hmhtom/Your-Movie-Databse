@@ -26,58 +26,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!--Custom Library-->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <title>YMDB-Your Movie Database|Search Results</title>
   </head>
-
   <body>
-    <header>
-      <nav>
-        <div class="nav-wrapper row">
-          <div class="col s3">
-            <a href="./index.html" id="navinfo" class="brand-logo left">YMDB</a>
+    <!--Nav Bar-->
+    <div class="nav-extended">
+      <nav class="user-select-none">
+        <div class="row nav-wrapper indigo darken-3">
+          <div class="col s12 m1 logo">
+            <a href="./index.html" class="red-text">YMDB</a>
           </div>
-          <form class="col s7">
-            <div class="row">
-              <div class="input-field col s9">
-                <input
-                  placeholder="Search Movies"
-                  id="searchBar"
-                  type="text"
-                  class="validate searchBar" />
-              </div>
-              <div class="input-field col s3">
-                <a id="searchBtn" class="waves-effect waves-light btn-small"
-                  >Search</a
-                >
-              </div>
-            </div>
-          </form>
-          <div class="col s1">
-            <i id="favouriteBtn" class="large material-icons right-align"
-              >star</i
+          <div class="input-field col s6 m4 offset-m3 indigo darken-3">
+            <input id="searchBar" type="search" />
+            <label class="label-icon" for="searchBar"
+              ><i class="material-icons">search</i></label
+            >
+          </div>
+          <div class="col s6 m4 indigo darken-3">
+            <a
+              id="searchBtn"
+              class="btn blue waves-effect waves-light align-self-center br-20"
+              >Search</a
             >
           </div>
         </div>
       </nav>
-    </header>
-    <main>
-      <section>
-
-        <h3>Search for <span id="searchResultQuery">Query</span></h2>
-      </section>
-
-      <div class="row">
-        <div class="col s6 left-align">
-          <a class="waves-effect waves-light btn-small pageButton">Previous</a>
-        </div>
-        <div class="col s6 right-align">
-          <a class="waves-effect waves-light btn-small pageButton">Next</a>
-        </div>
-      </div>
-
-      <div class="row" id="searchResultContainer"></div>
-    </main>
+    </div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="favouriteBtn"
+        href="favourite.html"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+        <i class="large material-icons">star</i>
+      </a>
+    </div>
+    <!--Search Results-->
+    <h2 class="header user-select-none">
+      Search for <span id="searchResultQuery"></span>
+    </h2>
+    <!--Search Results Container-->
+    <div class="row" id="searchResultContainer"></div>
+    <!--Footer Area-->
+    <footer class="indigo darken-3 white-text user-select-none">
+      &copy; 2022 YMDB Group Project, Inc.
+    </footer>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/searchResult.js"></script>
-
   </body>
 </html>
