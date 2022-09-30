@@ -28,7 +28,6 @@ function fetchSearch(query) {
 }
 
 function renderSearch(data) {
-  debugger;
   //Render #searchResultQuery and #searchResultContainer with data given
   $("#searchResultQuery").append(` and found ${data.results.length} results.`);
   //For each result create card

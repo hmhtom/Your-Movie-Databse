@@ -22,22 +22,21 @@ function fetchInfo(id) {
       return res.json();
     })
     .then((data) => {
+      //Once data obtain call renderInfo(data)
       renderInfo(data);
     })
     .catch((error) => {
       //Redirect to Error Page
       console.log(error.status);
     });
-  //fetch from url given
-  //Once data obtain call renderInfo(data)
-  //catch Error
+
 }
 
 function renderInfo(data) {
+  //Call renderFvrtBtn()
   renderFvrtBtn(data.id, data.title, data.poster_path);
   renderVideo(data);
-  //Render #movieInfoContainer with data given
-  //Call renderFvrtBtn()
+
 }
 
 function getTitle() {
@@ -51,6 +50,8 @@ function fetchVideo(url) {
   //catch Error
 }
 
+//Render #relatedVideoContainer with data given
+
 function renderVideo(data) {
   fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${data.title}&key=${YOUTUBE_API_KEY}`)
     .then((res) => {
@@ -62,6 +63,7 @@ function renderVideo(data) {
     .then((data) => {
       for (let i in data.items) {
         let item = data.items[i];
+        //Make to render in iframe Format
 
         let videoId = item.id.videoId;
         let iframe = $('<iframe>').attr({
@@ -79,9 +81,10 @@ function renderVideo(data) {
       //Redirect to Error Page
       console.log(error.status);
     });
-  //Render #relatedVideoContainer with data given
-  //Make to render in iframe Format
 }
+//render FavouriteBtn with parameter given
+//Favourite Btn will have data-title, data-id, data-poster_url
+
 
 function renderFvrtBtn(id, title, url) {
   $("#addFavouriteBtn").attr({
@@ -98,13 +101,10 @@ function renderFvrtBtn(id, title, url) {
 
 
   displayFavourite();
-  //render FavouriteBtn with parameter given
-  //Favourite Btn will have data-title, data-id, data-poster_url
-  //Check if localstorage have data-id already, look will be different
-  //return the Btn Element
+
 }
 
-
+//Add EventListener for FvrtBtn to add Movie to favourite in Local Storage
 
 $("#addFavouriteBtn").click(function (event) {
   let title = event.currentTarget.attributes["data-title"].value;
@@ -131,6 +131,7 @@ $("#addFavouriteBtn").click(function (event) {
 $("#deleteFavouriteBtn").click(function (event) {
   let data = getFavourite();
   if (!data || !data.results || data.results.length == 0) {
+    //return the Btn Element
     return;
   }
 
@@ -158,6 +159,5 @@ function displayFavourite() {
   }
 }
 
-//Add EventListener for FvrtBtn to add Movie to favourite in Local Storage
 
 fetchInfo(getId());

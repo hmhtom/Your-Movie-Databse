@@ -35,7 +35,10 @@ function renderFavourite(data) {
       "data.poster_path": `${data.results[i].poster_path}`,
     });
     let id = data.results[i].id;
+    //render to #favouriteContainer
     $("#favouriteContainer").append(card);
+    //add eventlistener for deleteBtn
+
     card.find(".delete-favourite").click(function (event) {
 
       let index = data.results.findIndex(r => r.id == id);
@@ -50,18 +53,12 @@ function renderFavourite(data) {
 renderFavourite(getFavourite());
 //call getFavourite()
 //render Favourite Thumbnails on page from data given
-//render to #favouriteContainer
+
 ///EveryFavouriteBox will have a href link to (moviepage.html?id={id}&title={TITLE}) to a new tab, and a delete btn with data-id
 
 
 function handleDelete(event) {
-  debugger;
   console.log('delete')
-  //event handler for delete BTN
-  //call getFavourite()
-  //remove the movie from data-id
-  //save favourite to localstorage
-  //call renderFavourite()
+
 }
 
-//add eventlistener for deleteBtn
