@@ -53,7 +53,7 @@ function fetchVideo(url) {
 //Render #relatedVideoContainer with data given
 
 function renderVideo(data) {
-  fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${data.title}&key=${YOUTUBE_API_KEY}`)
+  fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${data.title}&key=${YOUTUBE_API_KEY}`)
     .then((res) => {
       if (!res.ok) {
         throw res;
@@ -73,7 +73,7 @@ function renderVideo(data) {
           frameborder: '0'
         });
 
-        let container = $('<div class="col s3">').appendTo("#relatedVideoContainer");
+        let container = $('<div class="col s6 m4 13 x12">').appendTo("#relatedVideoContainer");
         container.append(iframe);
       }
     })
@@ -151,6 +151,7 @@ function displayFavourite() {
   let id = decodeURIComponent(new URL(location.href).searchParams.get("id"));
 
   if (data && data.results && data.results.some(r => r.id == id)) {
+    //figure out how to change favourite button to scale out. cause when removing the hide class it makes the button functionality not work
     $("#deleteFavouriteBtn").removeClass('hide');
     $("#addFavouriteBtn").addClass('hide');
   } else {

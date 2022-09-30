@@ -57,8 +57,5 @@ renderFavourite(getFavourite());
 ///EveryFavouriteBox will have a href link to (moviepage.html?id={id}&title={TITLE}) to a new tab, and a delete btn with data-id
 
 
-function handleDelete(event) {
-  console.log('delete')
 
-}
 
