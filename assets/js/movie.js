@@ -84,7 +84,6 @@ function renderVideo(data) {
 }
 
 function renderFvrtBtn(id, title, url) {
-
   $("#addFavouriteBtn").attr({
     'data-title': title,
     'data-id': id,
@@ -96,10 +95,67 @@ function renderFvrtBtn(id, title, url) {
     'data-id': id,
     'data-poster_url': url
   });
+
+
+  displayFavourite();
   //render FavouriteBtn with parameter given
   //Favourite Btn will have data-title, data-id, data-poster_url
   //Check if localstorage have data-id already, look will be different
   //return the Btn Element
+}
+
+
+
+$("#addFavouriteBtn").click(function (event) {
+  let title = event.currentTarget.attributes["data-title"].value;
+  let id = event.currentTarget.attributes["data-id"].value;
+  let posterUrl = event.currentTarget.attributes["data-poster_url"].value;
+
+  let data = getFavourite();
+
+  if (!data.results) {
+    data.results = [];
+  }
+
+  data.results.push({
+    id: id,
+    title: title,
+    poster_path: posterUrl
+  });
+
+  saveFavourite(data);
+  displayFavourite();
+});
+
+
+$("#deleteFavouriteBtn").click(function (event) {
+  let data = getFavourite();
+  if (!data || !data.results || data.results.length == 0) {
+    return;
+  }
+
+  let id = event.currentTarget.attributes["data-id"].value;
+  let index = data.results.findIndex(r => r.id == id);
+  if (index >= 0) {
+    data.results.splice(index, 1);
+  }
+  saveFavourite(data);
+  displayFavourite();
+});
+
+function displayFavourite() {
+
+  let data = getFavourite();
+
+  let id = decodeURIComponent(new URL(location.href).searchParams.get("id"));
+
+  if (data && data.results && data.results.some(r => r.id == id)) {
+    $("#deleteFavouriteBtn").removeClass('hide');
+    $("#addFavouriteBtn").addClass('hide');
+  } else {
+    $("#addFavouriteBtn").removeClass('hide');
+    $("#deleteFavouriteBtn").addClass('hide');
+  }
 }
 
 //Add EventListener for FvrtBtn to add Movie to favourite in Local Storage

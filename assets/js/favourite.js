@@ -53,9 +53,4 @@ function handleDelete(event) {
   //call renderFavourite()
 }
 
-
-function saveFavourites(savedata) {
-  localStorage.setItem("favourites", JSON.stringify(data));
-}
-
 //add eventlistener for deleteBtn

@@ -8,3 +8,7 @@ function getFavourite() {
     //return favourite as object
     return JSON.parse(favourites);
 }
+
+function saveFavourite(data) {
+    localStorage.setItem("favourites", JSON.stringify(data));
+}
