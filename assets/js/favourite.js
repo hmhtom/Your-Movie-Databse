@@ -1,6 +1,7 @@
 //Favourite Page Render
 
 function renderFavourite(data) {
+  $("#favouriteContainer").empty();
   //For each result create card
   for (var i in data.results) {
     let card = $(`
@@ -24,7 +25,7 @@ function renderFavourite(data) {
         <div class="card-reveal">
           <span class="card-title">${data.results[i].title
       }<i class="material-icons right">close</i></span>
-          <p>${data.results[i].overview}</p>
+          <p class="delete-favourite">Delete</p>
         </div>
       </div>
     </div>`);
@@ -33,7 +34,17 @@ function renderFavourite(data) {
       "data-id": `${data.results[i].id}`,
       "data.poster_path": `${data.results[i].poster_path}`,
     });
+    let id = data.results[i].id;
     $("#favouriteContainer").append(card);
+    card.find(".delete-favourite").click(function (event) {
+
+      let index = data.results.findIndex(r => r.id == id);
+      if (index >= 0) {
+        data.results.splice(index, 1);
+      }
+      saveFavourite(data);
+      renderFavourite(getFavourite());
+    });
   }
 }
 renderFavourite(getFavourite());
