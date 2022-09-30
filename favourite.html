@@ -1,66 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS Library-->
-    <!--Materialize V1.0.0 CSS Library-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <!--Materialize Icons Library-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet" />
-    <!--JS Library-->
-    <!--jQuery V3.6.1-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"></script>
-    <!--Moment.js Library-->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <!--Materialize V1.0.0-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!--Custom Library-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>YMDB-Your Movie Database|Favourite</title>
-  </head>
-  <body>
-    <!--Nav Bar-->
-    <div class="nav-extended">
-      <nav class="user-select-none">
-        <div class="row nav-wrapper indigo darken-3">
-          <div class="col s12 m1 logo">
-            <a href="./index.html" class="red-text">YMDB</a>
-          </div>
-          <div class="input-field col s6 m4 offset-m3 indigo darken-3">
-            <input id="searchBar" type="search" />
-            <label class="label-icon" for="searchBar"
-              ><i class="material-icons">search</i></label
-            >
-          </div>
-          <div class="col s6 m4 indigo darken-3">
-            <a
-              id="searchBtn"
-              class="btn blue waves-effect waves-light align-self-center br-20"
-              >Search</a
-            >
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS Library-->
+  <!--Materialize V1.0.0 CSS Library-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!--Materialize Icons Library-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--JS Library-->
+  <!--jQuery V3.6.1-->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <!--Moment.js Library-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <!--Materialize V1.0.0-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Custom Library-->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>YMDB-Your Movie Database|Favourite</title>
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <div class="nav-extended">
+    <nav class="user-select-none">
+      <div class="row nav-wrapper indigo darken-3">
+        <div class="col s12 m1 logo">
+          <a href="./index.html" class="red-text">YMDB</a>
         </div>
-      </nav>
-    </div>
-    <!--Favourite-->
-    <h2 class="header user-select-none">Favourite</h2>
-    <!--favourite Container-->
-    <div class="row" id="favouriteContainer"></div>
-    <!--Footer Area-->
-    <footer class="indigo darken-3 white-text user-select-none">
-      &copy; 2022 YMDB Group Project, Inc.
-    </footer>
-    <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/searchResult.js"></script>
-  </body>
+        <div class="input-field col s6 m4 offset-m3 indigo darken-3">
+          <input id="searchBar" type="search" />
+          <label class="label-icon" for="searchBar"><i class="material-icons">search</i></label>
+        </div>
+        <div class="col s6 m4 indigo darken-3">
+          <a id="searchBtn" class="btn blue waves-effect waves-light align-self-center br-20">Search</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--Favourite-->
+  <h2 class="header user-select-none">Favourite</h2>
+  <!--favourite Container-->
+  <div class="row" id="favouriteContainer"></div>
+  <!--Footer Area-->
+  <footer class="indigo darken-3 white-text user-select-none">
+    &copy; 2022 YMDB Group Project, Inc.
+  </footer>
+  <script src="./assets/js/favouritecommon.js"></script>
+  <script src="./assets/js/favourite.js"></script>
+</body>
+
 </html>

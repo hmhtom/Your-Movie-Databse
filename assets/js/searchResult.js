@@ -42,20 +42,17 @@ function renderSearch(data) {
             alt="poster"/>
         </div>
         <div class="card-content">
-          <span class="card-main-title grey-text text-darken-4">${
-            data.results[i].title
-          }</span>
+          <span class="card-main-title grey-text text-darken-4">${data.results[i].title
+      }</span>
         </div>
         <div class="card-action">
-          <a href="static-movie-page.html?id=${
-            data.results[i].id
-          }&title=${encodeURIComponent(data.results[i].title)}">View Detail</a>
+          <a href="static-movie-page.html?id=${data.results[i].id
+      }&title=${encodeURIComponent(data.results[i].title)}">View Detail</a>
           <i class="material-icons right activator">more_vert</i>
         </div>
         <div class="card-reveal">
-          <span class="card-title">${
-            data.results[i].title
-          }<i class="material-icons right">close</i></span>
+          <span class="card-title">${data.results[i].title
+      }<i class="material-icons right">close</i></span>
           <p>${data.results[i].overview}</p>
         </div>
       </div>

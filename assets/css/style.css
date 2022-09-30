@@ -1,4 +1,29 @@
 /*Custom Property*/
+
+/* element selectors */
+/*Footer*/
+
+footer {
+  text-align: center;
+  z-index: 2;
+}
+
+/* class selectors*/
+
+.align-self-center {
+  align-self: center;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+/*Main title for result cards*/
+.card-main-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 .flex {
   display: flex;
 }
@@ -13,22 +38,6 @@
 
 .justify-center {
   justify-content: center;
-}
-
-.align-self-center {
-  align-self: center;
-}
-
-.br-20 {
-  border-radius: 20px;
-}
-
-.user-select-none {
-  user-select: none;
-}
-
-.m-0 {
-  margin: 0;
 }
 
 #toast-container {
@@ -47,23 +56,21 @@
 .logo a {
   text-shadow: 2px 2px 8px black;
 }
-/*Footer*/
-footer {
-  text-align: center;
-  z-index: 2;
-}
-/*Main title for result cards*/
-.card-main-title {
-  font-size: 1.2em;
-  font-weight: bold;
-}
 
-/*index.html*/
+.m-0 {
+  margin: 0;
+}
 
 /*Movie Page*/
 .movie-info {
   margin-top: 5vh;
 }
+
+.user-select-none {
+  user-select: none;
+}
+
+/*id selectors*/
 
 #relatedVideoContainer {
   margin: 10px;
