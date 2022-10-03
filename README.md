@@ -2,12 +2,12 @@
 
 - [Description](#description)
 - [Deployment](#deployment)
-- [Visualization & Usage](#visualization---usage)
+- [Visualization and Usage](#visualization-and-usage)
   - [Main Page](#main-page)
-  - [Search & Results](#search---results)
+  - [Search and Results](#search-and-results)
   - [Favourite](#favourite)
-- [Contributors & Github Profile Links](#contributors---github-profile-links)
-- [Libraries & APIs](#libraries---apis)
+- [Contributors and Github Profile Links](#contributors-and-github-profile-links)
+- [Libraries and APIs](#libraries-and-apis)
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -21,7 +21,7 @@ Your Movie Database is a movie application that will present the user with relat
 
 [Github Repository](https://github.com/hmhtom/Your-Movie-Databse)
 
-## Visualization & Usage
+## Visualization and Usage
 
 ### Main Page
 
@@ -33,7 +33,7 @@ Your Movie Database is a movie application that will present the user with relat
 >
 > <img src="assets/img/trending.png" width="50%">
 
-### Search & Results
+### Search and Results
 
 > Search bar is located in navigation bar on all pages
 >
@@ -74,7 +74,7 @@ Your Movie Database is a movie application that will present the user with relat
 >
 > <img src="assets/img/favouriteadd.gif" width="30%">
 
-## Contributors & Github Profile Links
+## Contributors and Github Profile Links
 
 [Abdirahman Daqane](https://github.com/AbdiDaqane)
 
@@ -82,7 +82,7 @@ Your Movie Database is a movie application that will present the user with relat
 
 [Thiviya Sivasithamparam](https://github.com/thivsiv28)
 
-## Libraries & APIs
+## Libraries and APIs
 
 - [Materialize CSS Framework](https://materializecss.com/)
 - [jQuery](https://jquery.com/)
