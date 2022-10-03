@@ -24,6 +24,8 @@ function fetchSearch(query) {
     .catch((error) => {
       //Redirect to Error Page
       console.log(error.status);
+      location.href = "./error-status.html";
+
     });
 }
 
