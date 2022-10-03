@@ -18,8 +18,6 @@ function fetchInfo() {
     .then((data) => {
       //Once data obtain call renderInfo(data)
       renderInfo(data);
-      renderFvrtBtn(data.id, data.title, data.poster_path);
-      renderVideo(data);
     })
     .catch((error) => {
       //Redirect to Error Page
@@ -39,12 +37,12 @@ function renderInfo(data) {
   }
 
   let movieInfoEl =
-    $(`<div class="col s6 m5 l4 xl3 offset-m1 offset-l2 offset-xl3">
+    $(`<div class="col s6 offset-s3 m5 offset-m3 l4 xl3 offset-m1 offset-l2 offset-xl3">
   <img
     class="responsive-img"
     src="https://www.themoviedb.org/t/p/original/${data.poster_path}" />
 </div>
-<div class="col s4">
+<div class="col s12 l6 xl4">
   <ul class="collection with-header">
     <li class="collection-header">
       <h3>${data.title}</h3>
@@ -100,6 +98,7 @@ function renderVideo(data) {
           height: "200",
           src: "https://www.youtube.com/embed/" + videoId,
           frameborder: "0",
+          allowfullscreen: "true",
         });
 
         let container = $('<div class="col s12 m6 l4 xl3 center">').appendTo(
@@ -112,8 +111,6 @@ function renderVideo(data) {
       console.log(error.status);
     });
 }
-//render FavouriteBtn with parameter given
-//Favourite Btn will have data-title, data-id, data-poster_url
 
 //render FavouriteBtn with parameter given
 //Favourite Btn will have data-title, data-id, data-poster_url
