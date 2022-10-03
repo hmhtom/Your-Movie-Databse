@@ -2,7 +2,7 @@
 
 - [Description](#description)
 - [Deployment](#deployment)
-- [Visulization & Usage](#visulization---usage)
+- [Visualization & Usage](#visualization---usage)
   - [Main Page](#main-page)
   - [Search & Results](#search---results)
   - [Favourite](#favourite)
@@ -21,7 +21,7 @@ Your Movie Database is a movie application that will present the user with relat
 
 [Github Repository](https://github.com/hmhtom/Your-Movie-Databse)
 
-## Visulization & Usage
+## Visualization & Usage
 
 ### Main Page
 
@@ -52,7 +52,7 @@ Your Movie Database is a movie application that will present the user with relat
 >
 > <img src="assets/img/viewdetail.png" width="20%">
 
-> On the movie info page you will find the detail information about the movie includes title, genre, release date, overview, production companies IMDB link, and related Youtube videos for the movie.
+> On the movie info page you will find the detail information about the movie which will include: title, genre, release date, overview, production companies IMDB link, and related Youtube videos for the movie.
 >
 > <img src="assets/img/movieinfo.png" width="50%">
 
@@ -66,7 +66,7 @@ Your Movie Database is a movie application that will present the user with relat
 >
 > <img src="assets/img/dragdrop.gif" width="30%">
 >
-> Click the favourite button will take you to favourite page, where you can browse all your favourite movies and also delete them with the `x` on the bottom right of each movie card
+> Clicking the favourite button will take you to the favourite page, where you can browse all your favourite movies and also delete them with the `x` on the bottom right of each movie card
 >
 > <img src="assets/img/favouritepage.png" width="50%">
 >
