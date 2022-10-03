@@ -5,6 +5,10 @@
 
 footer {
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   z-index: 2;
 }
 
@@ -53,6 +57,7 @@ footer {
   font-size: 3em;
   text-align: center;
 }
+
 .logo a {
   text-shadow: 2px 2px 8px black;
 }
@@ -71,6 +76,12 @@ footer {
 }
 
 /*id selectors*/
+
+#errorMessage {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
 #relatedVideoContainer {
   margin: 10px;
