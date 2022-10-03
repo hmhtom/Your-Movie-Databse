@@ -21,6 +21,8 @@ Your Movie Database is a movie application that will present the user with relat
 
 [Github Repository](https://github.com/hmhtom/Your-Movie-Databse)
 
+[Presentation](https://docs.google.com/presentation/d/1pvv8hrDIGPZjo07nFUxO7vithkSkSIW29vEby_9Xn1w/edit?usp=sharing)
+
 ## Visualization and Usage
 
 ### Main Page
