@@ -28,7 +28,54 @@ function fetchInfo() {
 }
 
 function renderInfo(data) {
-  //Call renderFvrtBtn()
+  let genres = [];
+  for (var i in data.genres) {
+    genres.push(data.genres[i].name);
+  }
+
+  let production = [];
+  for (var i in data.production_companies) {
+    production.push(data.production_companies[i].name);
+  }
+
+  let movieInfoEl =
+    $(`<div class="col s6 m5 l4 xl3 offset-m1 offset-l2 offset-xl3">
+  <img
+    class="responsive-img"
+    src="https://www.themoviedb.org/t/p/original/${data.poster_path}" />
+</div>
+<div class="col s4">
+  <ul class="collection with-header">
+    <li class="collection-header">
+      <h3>${data.title}</h3>
+    </li>
+    <li class="collection-item">
+      <h5>Genres:</h5>
+      ${genres.join(", ")}
+    </li>
+    <li class="collection-item">
+      <h5>Release Date:</h5>
+      ${data.release_date}
+    </li>
+    <li class="collection-item">
+      <h5>Overview:</h5>
+      ${data.overview}
+    </li>
+    <li class="collection-item">
+      <h5>Production Companies:</h5>
+      ${production.join(", ")}
+    </li>
+    <li class="collection-item">
+      <h5>IMDB:</h5>
+      <a href="https://www.imdb.com/title/${data.imdb_id}">IMDB Link</a>
+    </li>
+  </ul>
+</div>`);
+
+  $("#movieInfoContainer").append(movieInfoEl);
+
+  renderFvrtBtn(data.id, data.title, data.poster_path);
+  renderVideo(data);
 }
 
 //Render #relatedVideoContainer with data given
@@ -65,6 +112,8 @@ function renderVideo(data) {
       console.log(error.status);
     });
 }
+//render FavouriteBtn with parameter given
+//Favourite Btn will have data-title, data-id, data-poster_url
 
 //render FavouriteBtn with parameter given
 //Favourite Btn will have data-title, data-id, data-poster_url
