@@ -5,7 +5,7 @@ const TMDB_API_KEY = "d94dfa549a03679b14c6609bddc9a3b0";
 function fetchTrending() {
   //Fetch response from Trending API on TMDB
   fetch(
-    `https:api.themoviedb.org/3/trending/movie/week?api_key=${TMDB_API_KEY}`
+    `https://api.themoviedb.org/3/trending/movie/week?api_key=${TMDB_API_KEY}`
   )
     .then((res) => {
       if (!res.ok) {
