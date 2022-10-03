@@ -8,6 +8,14 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!--Materialize Icons Library-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <!--jQuery UI V1.13.2 Themes:base-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <!--JS Library-->
     <!--jQuery V3.6.1-->
     <script
@@ -20,40 +28,63 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <!--Materialize V1.0.0-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--jQuery UI V1.3.2-->
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"></script>
     <!--Custom Library-->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <title>YMDB-Your Movie Database</title>
   </head>
-<body>
-    <header>
-    <a href="index.html"><h1>YMDB</h1><span style="font-size:300%;color:yellow;">&starf;</span></a>
-    <nav>
-      <input id="searchResultQuery" type="text" placeholder="">
-      <button type="button"  id="searchBtn">Search</button>
-  </nav>
-</header>
-  <!--hero section-->
-  <section>
-        <h1>YMDB</h1>
-        <h2>My Hero Area</h2>
-        <h4>Trending</h4>
-        </section>
-        <!--trending container-->
-        <div id="#trendingContainer">
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <img src="https://via.placeholder.com/200" alt="placeholder image"/>
-          <p>Watch all your latest movies here</p>
+  <body>
+    <!--Nav Bar-->
+    <div class="nav-extended">
+      <nav class="user-select-none">
+        <div class="row nav-wrapper indigo darken-3">
+          <div class="col s12 m1 logo">
+            <a href="./index.html" class="red-text">YMDB</a>
           </div>
-       <!--footer area-->
-    <footer>
-        &copy; 2022 YMDB Group Project, Inc.
-        
+          <div class="input-field col s6 m4 offset-m3 indigo darken-3">
+            <input id="searchBar" type="search" />
+            <label class="label-icon" for="searchBar"
+              ><i class="material-icons">search</i></label
+            >
+          </div>
+          <div class="col s6 m4 indigo darken-3">
+            <a
+              id="searchBtn"
+              class="btn blue waves-effect waves-light align-self-center br-20"
+              >Search</a
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--Favourite Btn Fixed-->
+    <div class="fixed-action-btn user-select-none">
+      <a
+        id="favouriteBtn"
+        href="favourite.html"
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+        <i class="large material-icons">star</i>
+      </a>
+    </div>
+    <!--Hero Area-->
+    <img src="./assets/img/hero-img.png" class="responsive-img" />
+    <!--Trending-->
+    <div class="trending user-select-none">
+      <h2 class="header">Trending</h2>
+      <!--Trending Container-->
+      <div class="row" id="trendingContainer"></div>
+    </div>
+
+    <!--Footer Area-->
+    <footer class="indigo darken-3 white-text user-select-none">
+      &copy; 2022 YMDB Group Project, Inc.
     </footer>
-    <script src="./assets/js/movie.js"> </script>
-</body>
+    <script src="./assets/js/trending.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/dropFavourite.js"></script>
+  </body>
 </html>

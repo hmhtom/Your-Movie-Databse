@@ -1,62 +1,88 @@
-.nav-wrapper {
-    background-color: rgb(23, 23, 116);
+/*Custom Property*/
+
+/* element selectors */
+/*Footer*/
+
+footer {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
 }
 
-#navinfo {
-    color: rgb(196, 17, 17);
+/* class selectors*/
+
+.align-self-center {
+  align-self: center;
 }
 
-#favouriteBtn {
-    color: yellow;
-    cursor: pointer;
-
+.br-20 {
+  border-radius: 20px;
 }
 
-
-.caption {
-    display: block;
+/*Main title for result cards*/
+.card-main-title {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.search input {
-    width: 300px;
-    height: 25px;
-    border-radius: 25px;
-    border: none;
+.flex {
+  display: flex;
 }
 
-.search {
-    float: right;
-    margin: 7px;
+.flex-column {
+  flex-direction: column;
 }
 
-#searchButton {
-    background-color: rgb(25, 100, 161);
-    border-radius: 16px;
-    color: #dfe4eb;
-    padding: 5px 10px;
-    margin-right: 16px;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
+.justify-between {
+  justify-content: space-between;
 }
 
-.searchBar {
-    background: white;
-    opacity: 1;
-    color: white;
+.justify-center {
+  justify-content: center;
 }
 
-.custom-col {
-    width: 20%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
+#toast-container {
+  top: auto !important;
+  left: auto !important;
+  bottom: 0;
+  right: 5%;
 }
 
-.searchContainer img {
-    border-radius: 25px;
+/*General*/
+/*Nav Bar/Logo*/
+.logo {
+  font-size: 3em;
+  text-align: center;
 }
 
-.searchContainer p {
-    font-weight: bold;
+.logo a {
+  text-shadow: 2px 2px 8px black;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+/*Movie Page*/
+.movie-info {
+  margin-top: 5vh;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+/*id selectors*/
+
+#errorMessage {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#relatedVideoContainer {
+  margin: 10px;
 }
