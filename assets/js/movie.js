@@ -98,6 +98,7 @@ function renderVideo(data) {
           height: "200",
           src: "https://www.youtube.com/embed/" + videoId,
           frameborder: "0",
+          allowfullscreen: "true",
         });
 
         let container = $('<div class="col s12 m6 l4 xl3 center">').appendTo(
