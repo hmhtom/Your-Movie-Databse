@@ -17,6 +17,10 @@ Your Movie Database is a movie application that will present the user with relat
 
 ## Deployment
 
+[Wireframe](https://www.figma.com/file/QO5OtMgiKavDPVndYy2l5w/YMDB?node-id=3%3A2)
+
+[UML/User Flow Diagram](https://www.figma.com/file/Iaag6yroVglylvjHfD5f2t/User-Flow-Diagram(YMDB)?node-id=0%3A1)
+
 [Deployed Application](https://hmhtom.github.io/Your-Movie-Databse)
 
 [Github Repository](https://github.com/hmhtom/Your-Movie-Databse)
