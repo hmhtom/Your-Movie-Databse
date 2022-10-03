@@ -37,11 +37,13 @@ function renderInfo(data) {
   }
 
   let movieInfoEl =
+
     $(`<div class="col s6 offset-s3 m5 offset-m3 l4 xl3 offset-m1 offset-l2 offset-xl3">
   <img
     class="responsive-img"
     src="https://www.themoviedb.org/t/p/original/${data.poster_path}" />
 </div>
+
 <div class="col s12 l6 xl4">
   <ul class="collection with-header">
     <li class="collection-header">
@@ -111,6 +113,8 @@ function renderVideo(data) {
       console.log(error.status);
     });
 }
+//render FavouriteBtn with parameter given
+//Favourite Btn will have data-title, data-id, data-poster_url
 
 //render FavouriteBtn with parameter given
 //Favourite Btn will have data-title, data-id, data-poster_url
