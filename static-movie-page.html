@@ -44,14 +44,18 @@
     <div class="fixed-action-btn user-select-none">
       <a
         id="addFavouriteBtn"
-        class="btn-floating btn-large waves-effect waves-light yellow darken-2">
+        class="btn-floating btn-large waves-effect waves-light yellow darken-2 tooltipped"
+        data-position="left"
+        data-tooltip="Add Favourite">
         <i class="large material-icons">star</i>
       </a>
     </div>
     <div class="fixed-action-btn user-select-none">
       <a
         id="deleteFavouriteBtn"
-        class="btn-floating btn-large waves-effect waves-light red darken-2">
+        class="btn-floating btn-large waves-effect waves-light red darken-2 tooltipped"
+        data-position="left"
+        data-tooltip="Delete Favourite">
         <!--leave the hide class for now on line 39-45 because removing it was not working with the scale out transition-->
         <i class="large material-icons">clear</i>
       </a>
@@ -101,6 +105,7 @@
     <footer class="indigo darken-3 white-text user-select-none">
       &copy; 2022 YMDB Group Project, Inc.
     </footer>
+    <script src="./assets/js/componentInit.js"></script>
     <script src="./assets/js/favouritecommon.js"></script>
     <script src="./assets/js/movie.js"></script>
     <script src="./assets/js/addFavourite.js"></script>
